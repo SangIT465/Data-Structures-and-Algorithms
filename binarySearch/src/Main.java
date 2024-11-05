@@ -1,8 +1,8 @@
 import java.util.Scanner;
-
 import searchAlgorithm.BinarySearch;
 import searchAlgorithm.LinearSearch;
 import sortAlgorithm.InsertionSort;
+import sortAlgorithm.MergeSort;
 import sortAlgorithm.SelectionSort;
 
 
@@ -86,13 +86,19 @@ public class Main {
         printArray(arrayInput);
     }
 
-    // Phương thức in mảng
-    static void printArray(int[] arr) {
-        for (int num : arr) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
+    // MergeSort
+    static void callMeForMergeSort(int[] arrayInput) {
+        MergeSort mergeSortInstance = new MergeSort();
+        mergeSortInstance.mergeSort(arrayInput, 0, arrayInput.length - 1);
+        System.out.println("Mang sau khi sap xep tu be den lon: ");
+        printArray(arrayInput);
     }
 
+    // Hàm in ra các phần tử trong mảng
+    public static void printArray(int[] arr) {
+        for (int j : arr) {
+            System.out.print(j + " ");
+        }
+    }
 
 }
