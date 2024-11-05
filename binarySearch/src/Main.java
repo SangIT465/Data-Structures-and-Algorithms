@@ -3,6 +3,7 @@ import searchAlgorithm.BinarySearch;
 import searchAlgorithm.LinearSearch;
 import sortAlgorithm.InsertionSort;
 import sortAlgorithm.MergeSort;
+import sortAlgorithm.QuickSort;
 import sortAlgorithm.SelectionSort;
 
 
@@ -86,11 +87,19 @@ public class Main {
         printArray(arrayInput);
     }
 
+    // QuickSort
+    static void callMeForQuickSort(int[] arrayInput) {
+        QuickSort quickSortInstance = new QuickSort();
+        quickSortInstance.quickSort(arrayInput, 0, arrayInput.length - 1);
+        System.out.println("mang sau khi sap xep tu be den lon(QuickSort): ");
+        printArray(arrayInput);
+    }
+
     // MergeSort
     static void callMeForMergeSort(int[] arrayInput) {
         MergeSort mergeSortInstance = new MergeSort();
         mergeSortInstance.mergeSort(arrayInput, 0, arrayInput.length - 1);
-        System.out.println("Mang sau khi sap xep tu be den lon: ");
+        System.out.println("Mang sau khi sap xep tu be den lon(MergeSort): ");
         printArray(arrayInput);
     }
 
