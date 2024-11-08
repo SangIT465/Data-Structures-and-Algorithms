@@ -12,7 +12,7 @@ public class QuickSort {
 
     // Hàm chia mảng vả trả về chỉ số pivot
     public static int partition(int[] arr, int low, int high) {
-        int pivot = arr[high];
+        int pivot = arr[high];  // pivot ở cuối mảng
         int i = (low - 1); // Chỉ số của phần tử nhỏ hơn pivot
 
         for (int j = low; j < high; j++) {
